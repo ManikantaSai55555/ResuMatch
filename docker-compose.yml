@@ -15,8 +15,8 @@ services:
     build: ./resumatcher-frontend
     ports:
       - "3000:80"
-    # environment:
-    #   - PORT=3000
+    environment:
+      - VITE_BACKEND_URL=${VITE_BACKEND_URL}
     volumes:
       - ./resumatcher-frontend:/app
     depends_on:
