@@ -18,7 +18,7 @@ app = FastAPI()
 # Add this after creating your FastAPI app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React dev server
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -117,7 +117,7 @@ async def analyze_resume(
     
     # --- Configuration for Structured Output ---
     gemini_config = {
-        "max_output_tokens": 2048,
+        "max_output_tokens": 8192,
         "temperature": 0.3,
         "response_mime_type": "application/json",
         "response_schema": analysis_schema,

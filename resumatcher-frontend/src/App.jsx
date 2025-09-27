@@ -66,7 +66,9 @@ const App = () => {
       formData.append('resume', resumeFile);
       formData.append('job_description', jobDescription);
 
-      const response = await fetch('http://localhost:8000/analyze', {
+      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+
+      const response = await fetch(`${backendUrl}/analyze`, {
         method: 'POST',
         body: formData,
       });
