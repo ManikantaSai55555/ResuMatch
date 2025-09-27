@@ -46,8 +46,7 @@ GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
 ```
 
  ### 3️⃣ Build and run the application using Docker Compose
-```bash
-Copy code
+```sh
 docker-compose up --build
 ```
  - Backend will be accessible at: http://localhost:8000
@@ -60,7 +59,7 @@ docker-compose up --build
  - Open http://localhost:3000 in your browser.
  - Upload a resume and a job description.
  - See the AI-powered analysis, including:
- - Match percentage
- - Matching skills
- - Missing skills
- - Suggestions for improvement
+   - Match percentage
+   - Matching skills
+   - Missing skills
+   - Suggestions for improvement
