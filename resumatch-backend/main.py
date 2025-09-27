@@ -150,6 +150,10 @@ async def analyze_resume(
     except Exception as e:
         print(f"Gemini API call failed: {e}")
         return {"error": f"An error occurred during the analysis: {e}"}
+    
+@app.get("/")
+def root():
+    return {"message": "ResuMatch backend is running!"}
 
 
 if __name__ == "__main__":
