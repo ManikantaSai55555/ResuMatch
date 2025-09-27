@@ -1,16 +1,70 @@
-# React + Vite
+ResuMatch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ResuMatch is an AI-powered resume analysis application that compares resumes against job descriptions using Google’s Gemini (Generative AI) API. It highlights matching skills, identifies missing skills, and provides personalized improvement suggestions. The project consists of a FastAPI backend and a React + Vite frontend, fully containerized with Docker.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+AI-based resume analysis using Google Gemini API
 
-## React Compiler
+Highlights matching skills and missing skills
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Provides personalized improvement suggestions
 
-## Expanding the ESLint configuration
+Fully containerized with Docker
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+FastAPI backend + React frontend
+
+Tech Stack
+
+Backend: Python 3.11, FastAPI, Uvicorn, Docker
+
+Frontend: React, Vite, Tailwind CSS
+
+APIs: Google Gemini / Generative AI
+
+Deployment: Docker Compose
+
+Prerequisites
+
+Docker
+ & Docker Compose
+ installed
+
+Google Cloud API Key with access to Gemini API
+
+Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/yourusername/resumatch.git
+cd resumatch
+
+2️⃣ Create environment variables
+
+Create a .env file in the root of the backend directory:
+
+GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
+
+3️⃣ Build and run the application using Docker Compose
+docker-compose up --build
+
+
+Backend will be accessible at: http://localhost:8000
+
+Frontend will be accessible at: http://localhost:3000
+
+⚠️ Make sure the backend port 8000 is exposed. React frontend calls backend at http://localhost:8000 in development.
+
+4️⃣ Using the Application
+
+Open http://localhost:3000 in your browser.
+
+Upload a resume and a job description.
+
+See the AI-powered analysis, including:
+
+Match percentage
+
+Matching skills
+
+Missing skills
+
+Suggestions for improvement
